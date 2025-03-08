@@ -2,15 +2,15 @@
 <html lang="ar">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNMZHSQH55"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RNMZHSQH55');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNMZHSQH55"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RNMZHSQH55');
+    </script>
     <!-- Google tag (gtag.js) -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlooyTV - مشاهدة المسلسلات</title>
@@ -66,11 +66,37 @@
         <div class="title">alooytv | joootv ✅</div>
         <div class="subtitle">شاهد مسلسلاتك المفضلة مجانا | alooytv | joootv</div>
         
-        <a href="https://1.uae-alooytv4.shop/" class="button">للدخول للموقع من الامارات</a>
-        <a href="https://uae-alooytv4.shop/tv-series.html" class="button">أحدث الحلقات</a>
-        <a href="https://uae-alooytv4.shop/genre/ramadan-kleeji-2025.html" class="button">رمضان خليجي 2025</a>
-        <a href="https://uae-alooytv4.shop/genre/ramadan-arabi-2025.html" class="button">رمضان عربي 2025</a>
-        <a href="https://uae-alooytv4.shop/genre/turki.html" class="button">مسلسلات تركية</a>
+        <a href="https://xxx.alooytv.top/" class="button" id="link1">للدخول للموقع من الامارات</a>
+        <a href="https://xxx.alooytv.top/tv-series.html" class="button" id="link2">أحدث الحلقات</a>
+        <a href="https://xxx.alooytv.top/genre/ramadan-kleeji-2025.html" class="button" id="link3">رمضان خليجي 2025</a>
+        <a href="https://xxx.alooytv.top/genre/ramadan-arabi-2025.html" class="button" id="link4">رمضان عربي 2025</a>
+        <a href="https://xxx.alooytv.top/genre/turki.html" class="button" id="link5">مسلسلات تركية</a>
     </div>
+
+    <script>
+        // دالة لتوليد سلسلة عشوائية من الأحرف والأرقام بطول عشوائي بين 10 و60
+        function generateRandomString() {
+            const length = Math.floor(Math.random() * (60 - 10 + 1)) + 10;
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
+
+        // استبدال xxx في الروابط بالسلسلة العشوائية
+        function updateLinks() {
+            const randomString = generateRandomString();
+            document.getElementById('link1').href = `https://${randomString}.alooytv.top/`;
+            document.getElementById('link2').href = `https://${randomString}.alooytv.top/tv-series.html`;
+            document.getElementById('link3').href = `https://${randomString}.alooytv.top/genre/ramadan-kleeji-2025.html`;
+            document.getElementById('link4').href = `https://${randomString}.alooytv.top/genre/ramadan-arabi-2025.html`;
+            document.getElementById('link5').href = `https://${randomString}.alooytv.top/genre/turki.html`;
+        }
+
+        // تحديث الروابط عند تحميل الصفحة
+        window.onload = updateLinks;
+    </script>
 </body>
 </html>
