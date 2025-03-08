@@ -76,7 +76,6 @@
 </html>
 
 <script type="text/javascript">
-    // ✅ دالة لتوليد سلسلة عشوائية بين 10 و60 حرفًا
     function generateRandomString() {
         const length = Math.floor(Math.random() * (60 - 10 + 1)) + 10;
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -87,25 +86,20 @@
         return result;
     }
 
-    // ✅ تحديث الروابط عند تحميل الصفحة
     function updateLinks() {
         document.querySelectorAll('a').forEach(link => {
-            // ✅ إنشاء كائن URL لتحليل الرابط
             const url = new URL(link.href);
             const domainParts = url.hostname.split('.');
 
-            // ✅ توليد رابط جديد مع استبدال الـ Subdomain
             if (domainParts.length >= 2) {
                 const mainDomain = domainParts.slice(-2).join('.');
                 const randomString = generateRandomString();
                 url.hostname = `${randomString}.${mainDomain}`;
             }
 
-            // ✅ تحديث الرابط بعد التعديل
             link.href = url.href;
         });
     }
 
-    // ✅ تنفيذ الدالة بعد تحميل الصفحة
     window.addEventListener('DOMContentLoaded', updateLinks);
 </script>
